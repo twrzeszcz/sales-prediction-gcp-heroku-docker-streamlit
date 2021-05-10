@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Sales prediction service</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+
+<style>
+body {
+  background-image: url("https://images.pexels.com/photos/1591055/pexels-photo-1591055.jpeg?cs=srgb&dl=pexels-miguel-%C3%A1-padri%C3%B1%C3%A1n-1591055.jpg&fm=jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover
+}
+</style>
+
+
+
+ <div class="login">
+	<h1>Predict Sales</h1>
+
+    <form action="{{ url_for('predict')}}"method="post">
+    	<input type="text" name="Item Identifier" placeholder="Item Identifier" required="required" />
+        <input type="text" name="Item Weight" placeholder="Item Weight" required="required" />
+		<input type="text" name="Item_Fat_Content" placeholder="Item_Fat_Content" required="required" />
+        <input type="text" name="Item_Visibility" placeholder="Item_Visibility" required="required" />
+        <input type="text" name="Item Type" placeholder="Item Type" required="required" />
+        <input type="text" name="Item MRP" placeholder="Item MRP" required="required" />
+        <input type="text" name="Outlet Identifier" placeholder="Outlet Identifier" required="required" />
+        <input type="text" name="Outlet_Establishment_Year" placeholder="Outlet_Establishment_Year" required="required" />
+        <input type="text" name="Outlet_Size" placeholder="Outlet_Size" required="required" />
+        <input type="text" name="Outlet_Location_Type" placeholder="Outlet_Location_Type" required="required" />
+        <input type="text" name="Outlet_Type" placeholder="Outlet_Type" required="required" />
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+
+
+</body>
+</html>
