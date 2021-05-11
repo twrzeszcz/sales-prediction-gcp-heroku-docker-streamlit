@@ -32,14 +32,14 @@ def load_tuned_models():
     names = dict(zip(tuned_names, tuned_names_load))
     models = {}
     for name, load_name in names.items():
-        models[name] = pickle.load(open('models/' + load_name + '.pkl', 'rb'))
-    models['Neural Network'] = keras.models.load_model('models/nn_model.h5')
+        models[name] = pickle.load(open('/streamlit/models/' + load_name + '.pkl', 'rb'))
+    models['Neural Network'] = keras.models.load_model('/streamlit/models/nn_model.h5')
 
     return models
 
 
 def load_data_raw():
-    df_raw = pd.read_csv('train.csv')
+    df_raw = pd.read_csv('/streamlit/train.csv')
     return df_raw
 
 
