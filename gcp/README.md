@@ -1,1 +1,1 @@
-# sales-prediction-gcp-heroku-docker-streamlit
+# Google Cloud Platform deployment
