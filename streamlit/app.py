@@ -188,7 +188,7 @@ def get_feature_names(column_transformer):
 
 def main_section():
     st.title('Sales Prediction Project')
-    background_im = cv2.imread('images/background.jpeg')
+    background_im = cv2.imread('/streamlit/images/background.jpeg')
     st.image(cv2.cvtColor(background_im, cv2.COLOR_BGR2RGB), use_column_width=True)
     st.subheader('General info')
     st.info('Visualisation and EDA section contains some plots and graphs as well as some basic '
