@@ -188,14 +188,14 @@ def get_feature_names(column_transformer):
 
 def main_section():
     st.title('Sales Prediction Project')
-    background_im = cv2.imread('streamlit/images/background.jpeg')
+    # background_im = cv2.imread('streamlit/images/background.jpeg')
+    background_im = cv2.imread('images/background.jpeg')
     st.image(cv2.cvtColor(background_im, cv2.COLOR_BGR2RGB), use_column_width=True)
-    st.subheader('General info')
-    st.info('Visualisation and EDA section contains some plots and graphs as well as some basic '
-            'information based on the raw data.')
-    st.info('Model Selection and Performance section provides information about tested models and their relative performance.')
-    st.info('In the Feature Importances section importance of the top 10 features predicted by different models is shown.')
-    st.info('In the Prediction Service section the best model is deployed and one can make predictions based on the manually typed data.')
+    st.markdown('**Visualisation and EDA** section contains some plots and graphs as well as some basic '
+            'information based on the raw data. **Model Selection and Performance** section provides information '
+                'about tested models and their relative performance. In the **Feature Importances** section importance of the '
+                'top 10 features predicted by different models is shown. In the **Prediction Service** section the best model'
+                ' is deployed and one can make predictions based on the manually typed data.')
     del background_im
     gc.collect()
 
